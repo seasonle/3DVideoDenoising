@@ -1,0 +1,1 @@
+extract2DImages(data3,'y','A:\zuendkerze3\')

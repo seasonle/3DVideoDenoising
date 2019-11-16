@@ -1,0 +1,7 @@
+data/
+dataVol/
+**/cudnn64_7.dll
+**/imagenet-vgg-f.mat
+*.png
+*.jpg
+*.avi

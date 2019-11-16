@@ -1,0 +1,2 @@
+compImages = 'A:\PROJECTS\2019_11_AIP\nets\DnCNN\TrainingCodes\DnCNN_TrainingCodes_DagNN_v1.1\results\zuendkerze3_0\compare\';
+createVideo(compImages,'_compare_','png',compImages,'DnCNNdenoiseCompare')
