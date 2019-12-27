@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8b668319-9f8d-46d9-854d-f5ddc81cba41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/google/unprocessing/googleDenoise" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../denoise.m" beforeDir="false" afterPath="$PROJECT_DIR$/../denoise.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matconvnet/matlab/simplenn/vl_simplenn.m" beforeDir="false" afterPath="$PROJECT_DIR$/../matconvnet/matlab/simplenn/vl_simplenn.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FFDNet/utilities/vl_simplenn.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../startup.m" beforeDir="false" afterPath="$PROJECT_DIR$/../startup.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zuendkerze2Video.m" beforeDir="false" afterPath="$PROJECT_DIR$/../zuendkerze2Video.m" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1TiZmxYqnjHTZ5gKwcpSrHGu4T2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b668319-9f8d-46d9-854d-f5ddc81cba41" name="Default Changelist" comment="" />
+      <created>1573945038618</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573945038618</updated>
+    </task>
+    <servers />
+  </component>
+</project>

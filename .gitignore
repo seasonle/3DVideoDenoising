@@ -1,5 +1,7 @@
+results/
 data/
 dataVol/
+nets/google/
 **/cudnn64_7.dll
 **/imagenet-vgg-f.mat
 *.png

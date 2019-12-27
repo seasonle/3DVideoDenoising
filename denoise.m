@@ -1,6 +1,16 @@
 startup();
 homePath = 'A:\PROJECTS\2019_11_AIP\';
-imageSet = 'Set12';
+imageSet = 'zuendkerze3';
+%imageSet = 'Set12';
 
-DnCNNdenoise(homePath,imageSet,25,1);
+%DnCNNdenoise(homePath,imageSet,0,1);
+%FFDdenoise('grayReal',homePath,imageSet,0,1);
 
+
+% noise model 1-25
+%IRCNNdenoise(homePath,imageSet,0,10,1);
+
+
+% levels, sigma noise, wavelet type
+neighShrinkDenoise(homePath,imageSet, 4 , 30, 'sym8');
+matlabWaveletDenoise(homePath, imageSet);

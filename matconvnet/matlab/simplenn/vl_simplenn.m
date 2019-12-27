@@ -372,7 +372,7 @@ for i=1:n
 
     case 'custom'
       res(i+1) = l.forward(l, res(i), res(i+1)) ;
-
+      
     otherwise
       error('Unknown layer type ''%s''.', l.type) ;
   end
