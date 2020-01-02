@@ -1,0 +1,7 @@
+function output = scale(input,min,max,a,b)
+
+output = (b-a)*(input-
+
+
+
+end
