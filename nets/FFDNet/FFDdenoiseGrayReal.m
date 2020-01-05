@@ -107,7 +107,7 @@
             %pause(pauseTime)
             
             imwrite(im2uint8(vertcat(input,output)), fullfile(folderResultCur, [nameCur, '_compare', extCur] ));
-            imwrite(im2uint8(output), fullfile(folderResultCur, [nameCur, '_', extCur] ));
+            imwrite(im2uint8(output), fullfile(folderResultCur, [nameCur, extCur] ));
         end
         
         

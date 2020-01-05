@@ -2,6 +2,7 @@ results/
 data/
 dataVol/
 nets/google/
+validation/data/
 **/cudnn64_7.dll
 **/imagenet-vgg-f.mat
 *.png

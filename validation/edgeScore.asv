@@ -1,0 +1,45 @@
+function [x,y] = edgeScore(path,fileext,sliceStart,sliceEnd,rotationAngle)
+
+%path = 'A:\PROJECTS\2019_11_AIP\data\qrm1ROI\'
+%fileext = '.png';
+%imIndex = 283;
+%rotationAngle = 36.5;
+
+%image dimension config
+xStart = 710;
+xEnd = 725;
+edgeData = zeros(sliceEnd-sliceStart, xEnd-xStart, 'uint32');
+
+yStart = 675;
+yEnd = 1180;
+
+for sliceIdx = sliceStart : sliceEnd
+
+    img = imread(fullfile(path,strcat(num2str(imIndex),fileext)));
+    img = imrotate(img,rotationAngle);
+
+    for i=0:(xEnd-xStart)-1
+        for j=0:(yEnd-yStart)
+            value = img(yStart+j,xStart+i);
+            edgeData(sliceIdx,i+1) = edgeData(sliceIdx,i+1)+uint32(value);
+        end
+    end
+
+end
+
+edgeData = edgeData / double(yEnd-yStart);
+
+edgeData = sum(edgeData,1);
+
+edgeData = edgeData / double(sliceEnd-sliceSta
+
+
+x = 0:14;
+y = edgeData;
+
+plot(x,y);  
+
+
+end
+
+
