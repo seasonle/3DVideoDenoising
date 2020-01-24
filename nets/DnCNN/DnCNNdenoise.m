@@ -1,4 +1,4 @@
-function DnCNNdenoise(path,imageSet,noiseAdd,useGPU)
+function data3result = DnCNNdenoise(path,imageSet,noiseAdd,useGPU)
 
 
 %clear; clc;
