@@ -7,8 +7,9 @@ formatOut = 'yy-mm-dd_HH_MM_SS';
 
 
 %% ROI:
-slices = 2;
-data3 = data3(:,:,278:(278+slices));
+start= 175;
+slices = 125;
+data3 = data3(:,:,start:(start+slices));
 
 
 %% 2D Filter
