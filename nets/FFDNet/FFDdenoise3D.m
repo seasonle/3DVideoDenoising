@@ -1,7 +1,8 @@
-function data3result = FFDdenoise3D(path, data3,useGPU)
+function [data3result, timed] = FFDdenoise3D(path, data3,useGPU)
     
     data3result = zeros(size(data3),'uint8');
 
+    tic;
     format compact;
     global sigmas; % input noise level or input noise level map
  
@@ -80,5 +81,7 @@ function data3result = FFDdenoise3D(path, data3,useGPU)
         data3result(:,:,i) = im2uint8(output);
     
     end
+    
+    timed = toc;
    
     end

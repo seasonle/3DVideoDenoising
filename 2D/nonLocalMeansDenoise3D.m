@@ -1,5 +1,6 @@
-function data3result = nonLocalMeansDenoise3D(path, data3, value)
+function [data3result, timed] = nonLocalMeansDenoise3D(path, data3, value)
 data3result = zeros(size(data3),'uint8');
+tic;
 parfor j = 1:size(data3,3)
         if(~value)
             output = imnlmfilt(data3(:,:,j));
@@ -8,5 +9,6 @@ parfor j = 1:size(data3,3)
         end
         data3result(:,:,j) = uint8(output);
 end
+timed = toc;
 end
 

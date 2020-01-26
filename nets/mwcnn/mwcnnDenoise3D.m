@@ -1,5 +1,7 @@
-function data3result = mwcnnDenoise3D(path, data3, Sigma, modelName, showresult)
+function [data3result,timed] = mwcnnDenoise3D(path, data3, Sigma, modelName, showresult)
 data3result = zeros(size(data3),'uint8');
+
+tic;
 
 addpath(genpath('./.'));
 vl_setupnn();
@@ -56,5 +58,6 @@ for i = 1 : size(data3,3)
     SSIMs(i) = SSIMCur;
 end
 fprintf('PSNR / SSIM : %.02f / %0.4f\n', mean(PSNRs),mean(SSIMs));
+timed = toc;
 end
 

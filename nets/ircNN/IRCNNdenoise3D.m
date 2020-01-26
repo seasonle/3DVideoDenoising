@@ -1,6 +1,7 @@
-function data3result = IRCNNdenoise3D(path,data3,noiseImg,noiseModels,useGPU)
+function [data3result, timed] = IRCNNdenoise3D(path,data3,noiseImg,noiseModels,useGPU)
 
 data3result = zeros(size(data3),'uint8');
+tic;
 noiseImg = [noiseImg];
 noiseModels = [noiseModels];
 addpath('utilities');
@@ -46,6 +47,8 @@ for i = 1:length(modelSigmaS)
         data3result(:,:,j) = im2uint8(output);        
     end
 end
+
+timed = toc;
 
 
 end

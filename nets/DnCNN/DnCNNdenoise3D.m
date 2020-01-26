@@ -1,6 +1,8 @@
-function data3result = DnCNNdenoise3D(path, data3, noiseAdd,useGPU)
+function [data3result, timed] = DnCNNdenoise3D(path, data3, noiseAdd,useGPU)
 
 data3result = zeros(size(data3),'uint8');
+
+tic;
 
 %% testing set
 mainpath = fullfile(path,'nets\DnCNN\TrainingCodes\DnCNN_TrainingCodes_DagNN_v1.1\');
@@ -53,6 +55,8 @@ for i= 1 : size(data3,3)
     
     data3result(:,:,i) = im2uint8(output);
 end
+
+timed = toc;
 
 end
 

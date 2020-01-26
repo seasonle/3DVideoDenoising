@@ -1,7 +1,8 @@
-function data3result = WaveresnetDenoiseRNN3D(path,data3,useGPU)
+function [data3result,timed] = WaveresnetDenoiseRNN3D(path,data3,useGPU)
 
 data3result = zeros(size(data3),'uint8');
 
+tic;
 %% Parameters
 lv                  = [1,2,3];              % vector of numbers of directional filter bank decomposition levels at each pyramidal level
 dflt                = 'vk';                 % filter name for the directional decomposition step
@@ -43,5 +44,6 @@ parfor j = 1:size(data3,3)
     data3result(:,:,j) = output;   
 end
 
+timed = toc;
 end
 
