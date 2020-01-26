@@ -14,19 +14,6 @@ data3 = data3(:,:,start:(start+slices));
 
 %% 2D Filter
 
-
-%% block matching
-noiseVar = 0.02;
-[bm3d, timed]= bm3dDenoise3D(homePath,data3,noiseVar);
-
-result = {};
-result.data = bm3d;
-result.time = timed;
-disp("block matching done in "+timed+"s");
-save(fullfile(homePath,"results\",strcat("bm3d",datestr(now,formatOut),".mat")),'result');
-clear bm3d;
-clear result;
-
 %% gauss
 sigma = 2;
 [gauss, timed] = gaussDenoise3D(homePath,data3,sigma);
@@ -40,6 +27,7 @@ save(fullfile(homePath,"results\",strcat("gauss",datestr(now,formatOut),".mat"))
 clear gauss;
 clear result;
 
+
 %% guided image filter
 [gif, timed] = guidedImageDenoise3D(homePath,data3);
 
@@ -50,6 +38,19 @@ disp("guided image filtering done in "+timed+"s");
 
 save(fullfile(homePath,"results\",strcat("gif",datestr(now,formatOut),".mat")),'result');
 clear gif;
+clear result;
+
+
+%% block matching
+noiseVar = 0.02;
+[bm3d, timed]= bm3dDenoise3D(homePath,data3,noiseVar);
+
+result = {};
+result.data = bm3d;
+result.time = timed;
+disp("block matching done in "+timed+"s");
+save(fullfile(homePath,"results\",strcat("bm3d",datestr(now,formatOut),".mat")),'result');
+clear bm3d;
 clear result;
 
 
@@ -69,7 +70,6 @@ disp("laplace done in "+timed+"s");
 save(fullfile(homePath,"results\",strcat("laplace",datestr(now,formatOut),".mat")),'result');
 clear laplace;
 clear result;
-
 
 
 %% mean box filter
