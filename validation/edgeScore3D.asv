@@ -19,12 +19,19 @@ resultsName  =[];
 resultsX = [];
 resultsY = [];
 
+%%ADD ORIGINAL DATA
+files = [ {"qrm2.mat"}, files];
+
 
 for k=1:size(files,2)
     
     data = load(fullfile(path,files{k}));
-    data = data.result;
-
+    
+    if(isfield(data,"data3"))
+            data.data = data.data3(:,:,175:300);
+    else
+            data = data.result;
+    end
     
     
     edgeData = zeros(sliceEnd-sliceStart+1, xEnd-xStart, 'uint32');

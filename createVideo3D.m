@@ -1,6 +1,7 @@
-function createVideo3D(data3,outputFolder,outputfile)
+function createVideo3D(data3,outputFolder,outputfile,fps)
 
     video = VideoWriter(strcat(fullfile(outputFolder,outputfile),'.avi')); %create the video object
+    video.FrameRate = fps;
     open(video); %open the file for writing
     
     numImages = size(data3,3);

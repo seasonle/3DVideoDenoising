@@ -4,7 +4,7 @@
 
 load('A:\PROJECTS\2019_11_AIP\data\qrm2.mat');
 
-data3 = data3(:,:,280:282);
+data3 = data3(:,:,175:300);
 
 resultsName  =[];
 resultsPSNR = [];
@@ -24,6 +24,7 @@ end
 bar(resultsPSNR(I));
 set(gca,'xtick',1:size(resultsName,1));
 set(gca,'xticklabel',resultsName(I));
+ylabel("PSNR in dB");
 
 %legend(resultsName)
 hold off

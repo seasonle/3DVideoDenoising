@@ -20,7 +20,9 @@ end
 bar(resultsTime(I));
 set(gca,'xtick',1:24);
 set(gca,'xticklabel',resultsName(I));
-
+set(gca, 'YScale', 'log')
+ylabel("seconds");
+title("Runtime for denoising a 1339x1279x126 volume");
 
 %legend(resultsName)
 hold off
