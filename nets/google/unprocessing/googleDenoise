@@ -1,0 +1,1 @@
+python -m unprocessing.dnd_denoise --model_ckpt=A:\PROJECTS\2019_11_AIP\nets\google\unprocessing\models\unprocessing_srgb_loss\model.ckpt-3516383.index --data-dir=A:\PROJECTS\2019_11_AIP\data\Set12\ --output-dir=A:\PROJECTS\2019_11_AIP\results\google_Set12

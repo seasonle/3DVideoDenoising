@@ -1,5 +1,4 @@
 cudnn64_7.dll
 imagenet-vgg-f.mat
 imdb.mat
-nets/
-matconvnet/
+*.data-00000-of-00001
