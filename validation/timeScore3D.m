@@ -24,5 +24,23 @@ set(gca, 'YScale', 'log')
 ylabel("seconds");
 title("Runtime for denoising a 1339x1279x126 volume");
 
+ax = gca;
+ax.FontSize = 19; 
+xlabel('Edge pixel','FontSize',40)
+ylabel('Pixel value','FontSize',40)
+
+xAX = get(gca,'XAxis');
+set(xAX,'FontSize', 22)
+
+yAX = get(gca,'YAxis');
+set(yAX,'FontSize', 30)
+
+
+xlabel('Denoising method','FontSize',40)
+ylabel('Runtime in seconds','FontSize',40)
+
+ax = gca;
+ax.TitleFontSizeMultiplier = 1.5;
+
 %legend(resultsName)
 hold off

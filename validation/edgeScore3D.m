@@ -42,6 +42,8 @@ for k=1:size(files,2)
             end
         end
         slice = slice+1;
+        imshow(img);
+
     end
     
     edgeData = edgeData / double(yEnd-yStart);
@@ -68,18 +70,44 @@ end
 resultsName{1} = 'original data';
 colors = distinguishable_colors(size(files,2));
 
+optimalData = [0 0 0 0 0 0 255 255 255 255 255 255 255 255 255];
+
+
+%% all data plot 
 x = 0:14;
 for i=1:size(files,2)
     plot(x,resultsY(i,:),'LineWidth',2,'Color',colors(i,:));
     hold on
 end
 
-ax = gca;
-ax.FontSize = 16; 
-xlabel('Edge pixel','FontSize',16)
-ylabel('Pixel value','FontSize',16)
+hold on
+plot(x,optimalData,'LineWidth',2,'Color',colors(2,:));
 
+ax = gca;
+ax.FontSize = 28; 
+xlabel('Edge pixel','FontSize',28)
+ylabel('Pixel value','FontSize',28)
+ylim([0 255])
 legend(resultsName)
+legend("Location","southoutside","Orientation","horizontal","NumColumns",10)
+
+hold off
+
+
+%% original data plot
+
+plot(x,resultsY(1,:),'LineWidth',2,'Color',colors(1,:));
+hold on
+plot(x,optimalData,'LineWidth',2,'Color',colors(2,:));
+
+ax = gca;
+ax.FontSize = 28; 
+xlabel('Edge pixel','FontSize',28)
+ylabel('Pixel value','FontSize',28)
+ylim([0 255])
+legend("original data", "optimal data")
+legend("Location","southoutside","Orientation","horizontal")
+
 hold off
 
 
